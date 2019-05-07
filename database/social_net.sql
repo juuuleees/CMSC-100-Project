@@ -21,7 +21,7 @@ create table user (
 create table post (
 	post_id int auto_increment,
 	post_date date,
-	time_stamp timestamp,
+	time_stamp time,
 	all_comments int not null,
 	content varchar(250) not null,
 	user_id int not null,
@@ -35,7 +35,7 @@ create table comment (
 	comment_id int auto_increment,
 	author varchar(50) not null,
 	content varchar(250) not null,
-	post_time timestamp,
+	post_time time,
 	user_id int not null,
 	post_id int not null,
 	primary key(comment_id),
